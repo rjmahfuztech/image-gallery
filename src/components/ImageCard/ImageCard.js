@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import {apiData} from "../../data/data";
 import ImageCardInfo from "../ImageCardInfo/ImageCardInfo";
 import SearchImage from "../SearchImage/SearchImage";
 
@@ -9,7 +10,7 @@ const ImageCard = () => {
 
   useEffect(() => {
     fetch(
-      `https://pixabay.com/api/?key=20268533-b7beda407a68f98dd0a903a67&q=${
+      `https://pixabay.com/api/?key=${apiData}&q=${
         search ? search : "laptop"
       }&image_type=photo&pretty=true`
     )
