@@ -27,12 +27,12 @@ const ImageCard = () => {
       <SearchImage searchByText={(text) => setSearch(text)}></SearchImage>
 
       {!isLoading && images.length === 0 && (
-        <h1 className="text-5xl text-center mx-auto mt-32">
-          Sorry, In Images Found
+        <h1 className="text-5xl text-center text-yellow-400 mx-auto mt-32">
+          Sorry, No Image Found!!
         </h1>
       )}
       {isLoading ? (
-        <h1 className="text-6xl text-center mx-auto mt-32">LOading...</h1>
+        <h1 className="text-6xl text-center mx-auto mt-32">Loading...</h1>
       ) : (
         <div className="flex justify-center mx-3">
           <div className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4">
